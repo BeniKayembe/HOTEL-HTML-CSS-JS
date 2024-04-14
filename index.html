@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><img src="" alt=""></a>
+
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#rooms" class="nav-link">Rooms</a></li>
+                    <li><a href="#restaurant" class="nav-link">Restaurant</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+
+                </ul>
+                <div class="hambourger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script>
+        const hambuger=document.querySelector('.hambuger');
+        const navMenu=document.querySelector('.nav-menu');
+
+        hambuger = addEventListener("click", mobileMenu);
+
+        function mobileMenu(){
+            hambuger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink=document.querySelectorAll('.nav-link');
+        navLink.forEach((n)=>n.addEventListener("click",closeMenu));
+
+        function closeMenu(){
+            hambuger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+
+    <section class="home" id="home">
+        <div class="head_container">
+            <div class="box">
+                <div class="text">
+                    <h1>Hello.Salut.Hola</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, eius! Nobis nesciunt consectetur, quidem atque itaque blanditiis perspiciatis necessitatibus, magni nihil ex excepturi odit asperiores veritatis iusto. Distinctio, adipisci est?</p>
+                    <button class="btn">MORE INFO</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./home1.jpg" alt="" class="slide">
+            </div>
+            <div class="image_item">
+                <img src="./home1.jpg" alt="" class="slide active" onclick="img('./home1.jpg')">
+                <img src="./room2.jpg" alt="" class="slide" onclick="img('./room2.jpg')">
+                <img src="./room3.jpg" alt="" class="slide" onclick="img('./room3.jpg')">
+                <img src="./room4.jpg" alt="" class="slide" onclick="img('./room4.jpg')">
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+            function img(anything) {
+            
+            document.querySelector('.slide').src=anything;
+        }
+
+        function change(change){
+            const line = document.querySelector('.image');
+            line.style.background=change;
+        }
+
+    </script>
+    
+
+    <section class="book">
+        <div class="container flex">
+            <div class="input grid">
+                <label>Check-in:</label>
+                <input type="date" placeholder="Check-in-Date">
+            </div>
+            <div class="container flex">
+            <div class="input grid">
+            <div class="box">
+                <label>Check-out:</label>
+                <input type="date" placeholder="Check-out-Date">
+            </div>
+            <div class="box">
+                <label>Adults:</label> <br>
+                <input type="number" placeholder="0">
+            </div>
+            <div class="box">
+                <label>Children:</label> <br>
+                <input type="number" placeholder="0">
+            </div>
+        </div>
+
+        <div class="search input">
+            <input type="submit" value="SEARCH">
+        </div>
+    </section>
+
+    <section class="about top" id="about">
+        <div class="container flex">
+            <div class="left">
+                <div class="img">
+                    <img src="./home3.jpg" alt="" class="image1">
+                    <img src="./room4.jpg" alt="" class="image2">
+                </div>
+            </div>
+            <div class="right">
+                <div class="heading">
+                    <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+                    <h2>Welcome to Blue Tree Hotels Resort</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum delectus repellendus accusantium, sit neque placeat magni ad et? Doloremque maiores nostrum et! Consequuntur recusandae debitis aliquam ipsa assumenda saepe quaerat!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad repellat voluptate eum fuga quae ipsa molestiae expedita voluptatem, accusamus similique hic molestias animi, architecto id laborum sint numquam repudiandae.</p>
+                    <button class="btn1">READ MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper top">
+        <div class="container">
+            <div class="text">
+                <h2>Our Amenities</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet laborum non quae voluptatem laboriosam odio beatae adipisci ab aliquid, et consectetur reprehenderit soluta nihil expedita, provident, culpa rerum vero quidem.</p>
+                <div class="content">
+                    <div class="box flex">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>Gym & yoga</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-spa"></i>
+                    <span>Spa & massage</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-ship"></i>
+                    <span>Boat Tours</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimmer"></i>
+                    <span>Surfing Lesson</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-microphone"></i>
+                    <span>Conference room</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-water"></i>
+                    <span>Diving & smorking</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>Private Beach</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="room top" id="room">
+        <div class="container">
+            <div class="heading_top flex1">
+                <div class="heading">
+             <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+              <h2>Rooms $ Suites</h2>
+            </div>
+            <div class="button">
+                <button class="btn1">VIEW ALL</button>
+            </div>
+        </div>
+    </div>
+        <div class="content grid">
+            <div class="box">
+                <div class="img">
+                    <img src="./home1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Supeior Soble Rooms</h3>
+                    <p><span>$</span>129 <span>/per night</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./room4.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Supeior Soble Rooms</h3>
+                    <p><span>$</span>129 <span>/per night</span></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <img src="./room3.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Supeior Soble Rooms</h3>
+                    <p><span>$</span>129 <span>/per night</span></p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="wrapper wrapper2 top">
+        <div class="container">
+            <div class="text">
+                <div class="heading">
+                    <h5>AT THE HEART OF COMMUNICATION</h5>
+                    <h2>People Say</h2>
+                </div>
+                <div class="para">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quae voluptates officia eveniet doloremque molestiae consectetur ipsam dolores commodi suscipit, itaque qui omnis aut, rerum ratione vero. Voluptatum, inventore possimus!</p>
+            
+            <div class="box flex">
+                <div class="img">
+                    <img src="./beni.jpg" alt="">
+                </div>
+                <div class="name">
+                    <h5>BENI KAYEMBE</h5>
+                    <h5>BUKASA</h5>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="restaurant top" id="restaurant">
+        <div class="container flex">
+            <div class="left">
+                <img src="restaurant.jpg" alt="">
+            </div>
+            <div class="right">
+                <div class="text">
+                    <h2>Our Restaurant</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit unde maxime omnis deserunt vitae ipsa fugiat cum commodi, iste odio, minima veniam aspernatur similique officia enim laboriosam sit expedita voluptas!</p>
+                </div>
+                <div class="accordionItem">
+                    <div class="accordionItem open">
+                        <h2 class="accordionIHeading">Italian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, mollitia cupiditate! Sint eum, reiciendis corporis fugit unde adipisci hic inventore! Totam labore deleniti est esse! Explicabo similique enim numquam illo.</p>
+                        </div>
+                        <div class="accordionItem close">
+                            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+                            <div class="accordionItemContent">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus magnam iusto aut minima aspernatur itaque. Eveniet inventore architecto, quam impedit ratione culpa molestias, unde excepturi totam nesciunt, cum esse?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordionItem close">
+                        <h2 class="accordionIHeading">Italian Kitchen</h2>
+                        <div class="accordionItemContent">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, mollitia cupiditate! Sint eum, reiciendis corporis fugit unde adipisci hic inventore! Totam labore deleniti est esse! Explicabo similique enim numquam illo.</p>
+                        </div>
+                        <div class="accordionItem close">
+                            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+                            <div class="accordionItemContent">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem possimus magnam iusto aut minima aspernatur itaque. Eveniet inventore architecto, quam impedit ratione culpa molestias, unde excepturi totam nesciunt, cum esse?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var accItem = document.getElementsByClassName('accordionItem');
+        var accHD = document.getElementsByClassName('accordionIHeading');
+
+        for(i = 0; i < accHD.length; i++){
+            accHD[i].addEventListener('click', toggleItem, false);
+        }
+
+        function toggleItem(){
+            var itemClass = this.parentNode.className;
+            for(var i = 0; i < accItem.length ; i++){
+                accItem[i].className='accordionItem close';
+            }
+            if(itemClass == 'accordionItem close'){
+                this.parentNode.className = 'accordionItem open';
+            }
+        }
+    </script>
+   <section class="gallery mtop" id="gallery">
+    <div class="container">
+        <div class="heading_top flex1">
+            <div class="heading">
+                <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+                <h2>Photo Gallery of Our Hotel</h2>
+            </div>
+            <div class="button">
+                <button class="btn1">VIEW GALLERY</button>
+            </div>
+        </div></div>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="./Pool.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="home1.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="home2.jpeg" alt="">
+                </div>
+                <div class="item">
+                    <img src="home3.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="home4.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="./room2.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="./room3.jpg" alt="">
+                </div>
+                <div class="item">
+                    <img src="./restaurant.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </div>
+    <section class="map top">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13017.999314713272!2d33.314940699999994!3d35.34324005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2s!4v1708368838389!5m2!1sfr!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+    </script>
+   </section>
+   <footer class="container grid top">
+    <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam culpa vitae necessitatibus, quas doloremque cumque quod voluptatem eligendi nam ducimus autem nulla ipsum maxime atque alias earum, explicabo sapiente. Eos.</p>
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+            <img src="https://img.icons8.com/color/48/000000/visa.png" alt="">
+            <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="">
+            <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" alt="">
+            <img src="https://img.icons8.com/fluency/48/000000/amex.png" alt="">
+        </div>
+    </div>
+    <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+            <li>Our Secret Island Boat Tour Is Just for You</li>
+            <li>Chill and Escape in Our Natural Shelters</li>
+            <li>September in Blue Tree Hotels</li>
+            <li>Live Music Concerts at Blue Tree Hotels</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+            <li>About Blue Tree Hotel</li>
+            <li>Customer Care/Help</li>
+            <li>Comparate Accounts</li>
+            <li>Financial Information</li>
+            <li>Terms & Conditions</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+            <li>3015 Grand Ave, Cocount Grove, Merrick Way FL 123456</li>
+            <li><i class="far fa-envelope">Benikayembe@gmail.com</li>
+            <li><i class="far fa-phone-alt">+905338630337</li>
+            <li><i class="far fa-phone-alt">+243995621554</li>
+            <li><i class="far fa-comments"></i>24/ 7 Customer Services</li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
