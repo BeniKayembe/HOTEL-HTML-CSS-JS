@@ -8,6 +8,7 @@ html,
 body{
     font-family: 'Roboto Slab', serif;
     scroll-behavior: smooth;
+    
 }
 
 li{
@@ -70,7 +71,8 @@ header  ul li{
 header ul li a{
     font-size: 1.2rem;
     font-weight: 400;
-    color: rgb(33, 4, 100);
+    /* color: rgb(33, 4, 100); */
+    color: white;
     transition: 0.5s;
 }
 
@@ -139,11 +141,20 @@ header ul li a:hover{
     max-width: 50%;
     color: white;
     margin: 20% 0 0 10%;
+    /* border-radius: 20px; */
+    
+}
+.restaurant img{
+    border-radius: 20px;
 }
 
 .home h1{
     font-size: 80px;
     font-weight: 400;
+}
+
+.item img{
+    border-radius: 20px;
 }
 
 .home p{
@@ -228,11 +239,20 @@ margin-top: 5%;
 width: 100%;
 height: 20vh;
 color: white;
+/* border-radius: 20px; */
+/* border: 2px solid red; */
+}
+.book .container{
+    border-radius: 20px;
+    /* border: 2px solid red; */
+    padding: 10px;
+    background-color: #242e5a;
 }
 
 .book .input{
     background: #242e5a;
     padding: 20px 20px 40px 20px;
+    /* border-radius: 20px; */
 }
 
 .book .search{
@@ -272,6 +292,10 @@ input{
 
 .about{
     margin-bottom: 50px;
+}
+
+.img img{
+    border-radius: 20px;
 }
 
 .about .img{
@@ -369,6 +393,7 @@ input{
     right: 10%;
     padding-top: 10%;
     color: white;
+    border-radius: 20px;
 }
 
 .wrapper .content{
