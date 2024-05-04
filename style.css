@@ -344,6 +344,10 @@ input{
     color: #000;
 }
 
+.btn{
+    margin: 0;
+}
+
 .btn:hover{
     color:#fff;
     background-color: #242e5a;
