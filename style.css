@@ -399,9 +399,19 @@ input{
     position: absolute;
     top: -13%;
     right: 10%;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     color: white;
     border-radius: 20px;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.active{
+    color: #5d5e63;
 }
 
 .wrapper .content{
